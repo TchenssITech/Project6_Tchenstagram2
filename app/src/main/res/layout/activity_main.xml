@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFBB86FC"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:titleTextColor="@android:color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="120dp"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@+id/bottomNavigation"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFBB86FC"
+        android:backgroundTint="#FFBB86FC"
+        app:menu="@menu/menu_bottom_navigation"
+        app:itemIconTint="@drawable/button_state"/>
+
+    <TextView
+        android:id="@+id/tvbar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:fontFamily="cursive"
+        android:text="Tchenstagram2"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
